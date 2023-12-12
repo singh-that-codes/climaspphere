@@ -41,16 +41,30 @@ class _WeatherPageState extends State<WeatherPage> {
   
   
   Widget build(BuildContext context) {
+    print('_weather: $_weather'); // Log the value of _weather for debugging
+
     return Scaffold(
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          //city name
-          Text(_weather?.cityName ?? 'city ..'),
+          // City name
+          Text(
+            _weather?.cityName ?? 'City ...',
+            style:
+                TextStyle(color: Colors.black), // Add text color for visibility
+          ),
 
-          //temperature
-          Text('${_weather?.temperature.round()}°C')
-      ],)
+          // Temperature
+          Text(
+            '${_weather?.temperature?.round() ?? 0}°C',
+            style:
+                TextStyle(color: Colors.black), // Add text color for visibility
+          ),
+        ],
+      ),
     );
   }
+
+
 }

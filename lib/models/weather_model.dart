@@ -12,16 +12,16 @@ class Weather {
   });
 
   factory Weather.fromJson(Map<String, dynamic> json) {
-    try {
-      return Weather(
-        cityName: json["cityName"] as String,
-        temperature: (json["main"]["temp"] as num).toDouble(),
-        mainCondition: json['weather'][0]['main'] as String,
-      );
-    } catch (e) {
-      // Handle parsing errors
-      print('Error parsing Weather from JSON: $e');
-      rethrow; // Rethrow the exception for debugging purposes or custom handling
-    }
+  try {
+    return Weather(
+      cityName: json["cityName"] as String? ?? '',
+      temperature: (json["main"]["temp"] as num?)?.toDouble() ?? 0.0,
+      mainCondition: json['weather'][0]['main'] as String? ?? '',
+    );
+  } catch (e) {
+    print('Error parsing Weather from JSON: $e');
+    rethrow;
   }
 }
+
+  }
