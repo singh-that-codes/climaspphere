@@ -1,4 +1,4 @@
-import 'package:climasphere/pages/weatherpage.dart';
+import 'package:climasphere/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class Climasphere extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:WeatherPage()
+      home:SplashScreen()
     );
   }
 }
