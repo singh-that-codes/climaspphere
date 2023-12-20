@@ -1,5 +1,6 @@
 import 'package:climasphere/pages/weatherpage.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -28,13 +29,13 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            /*Text(
+            Text(
               'ClimaSphere',
               style: GoogleFonts.lato(
                   fontSize: 38,
                   color: Colors.white,
                   fontWeight: FontWeight.bold),
-            ),*/
+            ),
             Lottie.asset(
               'assets/splash.json', 
               width: 400,
