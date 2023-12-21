@@ -86,7 +86,7 @@ String getWeatherAnimation(String? mainCondition){
             Text(
               '${_weather?.temperature?.round() ?? 0}°C',
               style:
-                  GoogleFonts.lato(fontSize: 38, color: Colors.white,fontWeight: FontWeight.bold),
+                  GoogleFonts.lato(fontSize: 38, color: Colors.white,fontWeight: FontWeight.boldo),
             ),
           ],
         ),
